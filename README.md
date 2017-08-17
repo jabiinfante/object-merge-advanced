@@ -77,15 +77,15 @@ When `object-merge-advanced` merges two _objects_, it will check the types of th
 
 There are ten possible combinations: 10 types of first input (object #1) and ten types of second input (object #2): non-empty (full) object, empty object, non-empty array, empty array, non-empty string, empty string, number, boolean, undefined and null.
 
-![matching algorithm](http://i.imgsafe.org/7e71b2b3b0.png)
+![matching algorithm](https://cdn.rawgit.com/codsen/object-merge-advanced/54bac472/media/object-merge-advanced_algorithm.png)
 
 A Large number in the centre of a square shows which value prevails.
 
 In the diagram above, the squares show **which value gets assigned to the merge result** — the first object's (marked `1`, pink fields) or second one's (marked `2`, sky blue fields).
 
-In some cases, we perform a custom actions: 
+In some cases, we perform a custom actions:
 
-1) passing value objects back into the main function _recursively_ (when both values are plain objects), 
+1) passing value objects back into the main function _recursively_ (when both values are plain objects),
 2) when merging arrays, we pay extra attention to the options object (if present) and the contents of both arrays (taking special measures for objects within),
 3) Logical "OR" composition (when both values are Boolean).
 
